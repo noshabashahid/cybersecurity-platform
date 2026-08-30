@@ -17,6 +17,7 @@ const articleRoutes = require('./routes/articleRoutes');
 const quizRoutes = require('./routes/quizRoutes');
 
 const app = express();
+app.set('trust proxy', 1);
 
 // ---------------------------------------------------------------------
 // Security & core middleware
