@@ -80,14 +80,12 @@ cybersecurity-platform/
 ## 6. Installation
 
 ```bash
-# 1. Unzip and enter the project
-cd cybersecurity-platform
 
-# 2. Install backend dependencies
+# 1. Install backend dependencies
 cd backend
 npm install
 
-# 3. Install frontend dependencies
+# 2. Install frontend dependencies
 cd ../frontend
 npm install
 ```
@@ -258,4 +256,4 @@ educational threat-recognition, not real malicious content.
 
 ---
 
-Built as a demonstration full-stack cybersecurity awareness platform.
+
