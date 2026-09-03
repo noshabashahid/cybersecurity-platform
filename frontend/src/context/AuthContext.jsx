@@ -53,7 +53,7 @@ export function AuthProvider({ children }) {
     try {
       const res = await api.post('/auth/admin-login', { email, password });
       persist(res.data.token, res.data.user);
-      return { success: true };
+     return { success: true, user: res.data.user };
     } catch (err) {
       return { success: false, message: extractErrorMessage(err, 'Admin login failed.') };
     }

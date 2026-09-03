@@ -17,7 +17,9 @@ export default function Login() {
     const res = await login(form.email, form.password);
     setLoading(false);
     if (res.success) {
-      navigate('/dashboard');
+      // Admin accounts logging in through the regular user login page
+      // should still land on the admin dashboard, not the user one.
+      navigate(res.user?.role === 'admin' ? '/admin' : '/dashboard');
     } else {
       setError(res.message);
     }
